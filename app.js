@@ -92,15 +92,79 @@ const comments = [
 
 
 
-
-const veryOldInventors = inventors.filter((inventor) => {
+//--------------------exercise 1----------------------------
+let veryOldInventors = []
+veryOldInventors = inventors.filter((inventor) => {
     return inventor.year <= 1599 && inventor.year >=1500
 })
 
-// console.log(veryOldInventors);
+console.log(veryOldInventors);
 
 
-const inventorNames = inventors.map((inventor) => {
+
+//--------------------exercise 2----------------------------
+let inventorNames = []
+inventorNames = inventors.map((inventor) => {
 return { first: inventor.first , last: inventor.last }
 })
-// console.log(inventorNames)
+console.log(inventorNames)
+
+
+//--------------------exercise 3----------------------------
+// let sortedByBirthYear = [];
+// sortedByBirthYear = inventors.sort((inventor) => {
+//   return 
+// })
+// console.log(sortedByBirthYear)
+
+
+//--------------------exercise 4----------------------------
+let inventorNameAda = {};
+
+  inventorNameAda = inventors.find((inventor) => {
+  return inventor.first === 'Ada'
+})
+console.log(inventorNameAda)
+
+
+//--------------------exercise 5----------------------------
+let firstLast = []
+
+firstLast = people.map((person) => {
+  let name = person.split(', ')
+  return `${name[1]} ${name[0]}`
+})
+console.log(firstLast)
+
+
+//--------------------exercise 6----------------------------
+let isAdultPresent = null
+
+isAdultPresent = devs.some((dev) => {
+  return (2026 - dev.year) >= 18
+})
+console.log(isAdultPresent)
+
+
+//--------------------exercise 7----------------------------
+let isEveryone19OrOlder = null
+
+isEveryone19OrOlder = devs.every((dev) => {
+  return (2026 - dev.year) >= 19
+})
+console.log(isEveryone19OrOlder)
+//--------------------exercise 8----------------------------
+let commentById = {};
+
+commentById = comments.find((comment) => {
+  return comment.id === 823423
+})
+console.log(commentById)
+
+
+//--------------------exercise 9----------------------------
+let idx = null
+idx = comments.findIndex((comment) => {
+  return comment.id === 123523
+})
+console.log(idx)
